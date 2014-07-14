@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-#[inline(always)]
+#[inline(always)] #[no_split_stack]
 pub unsafe fn syscall6(nr: int, p1: int, p2: int, p3: int, p4: int, p5: int, p6: int) -> int
 {
     let mut rv : int;
@@ -11,7 +11,7 @@ pub unsafe fn syscall6(nr: int, p1: int, p2: int, p3: int, p4: int, p5: int, p6:
     rv
 }
 
-#[inline(always)]
+#[inline(always)] #[no_split_stack]
 pub unsafe fn syscall5(nr: int, p1: int, p2: int, p3: int, p4: int, p5: int) -> int
 {
     let mut rv : int;
@@ -22,7 +22,7 @@ pub unsafe fn syscall5(nr: int, p1: int, p2: int, p3: int, p4: int, p5: int) -> 
     rv
 }
 
-#[inline(always)]
+#[inline(always)] #[no_split_stack]
 pub unsafe fn syscall4(nr: int, p1: int, p2: int, p3: int, p4: int) -> int
 {
     let mut rv : int;
@@ -33,7 +33,7 @@ pub unsafe fn syscall4(nr: int, p1: int, p2: int, p3: int, p4: int) -> int
     rv
 }
 
-#[inline(always)]
+#[inline(always)] #[no_split_stack]
 pub unsafe fn syscall3(nr: int, p1: int, p2: int, p3: int) -> int
 {
     let mut rv : int;
@@ -44,7 +44,7 @@ pub unsafe fn syscall3(nr: int, p1: int, p2: int, p3: int) -> int
     rv
 }
 
-#[inline(always)]
+#[inline(always)] #[no_split_stack]
 pub unsafe fn syscall2(nr: int, p1: int, p2: int) -> int
 {
     let mut rv : int;
@@ -55,7 +55,7 @@ pub unsafe fn syscall2(nr: int, p1: int, p2: int) -> int
     rv
 }
 
-#[inline(always)]
+#[inline(always)] #[no_split_stack]
 pub unsafe fn syscall1(nr: int, p1: int) -> int
 {
     let mut rv : int;
@@ -66,7 +66,7 @@ pub unsafe fn syscall1(nr: int, p1: int) -> int
     rv
 }
 
-#[inline(always)]
+#[inline(always)] #[no_split_stack]
 pub unsafe fn syscall0(nr: int) -> int
 {
     let mut rv : int;

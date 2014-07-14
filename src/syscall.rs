@@ -9,6 +9,7 @@ pub enum Maybe
     No(uint),
 }
 
+#[no_split_stack]
 pub unsafe fn write(fd: i32, buf: *const u8, len: uint) -> Maybe
 {
     let rv = syscall3(syscall_nr::write, fd as int, buf as int, len as int);
@@ -22,6 +23,7 @@ pub unsafe fn write(fd: i32, buf: *const u8, len: uint) -> Maybe
     }
 }
 
+#[no_split_stack]
 pub unsafe fn exit(status: i32)
 {
     syscall1(syscall_nr::exit, status as int);
